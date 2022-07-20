@@ -145,10 +145,6 @@ main {
 
 }
 
-.dsn {
-    background-color: red;
-}
-
 .nav-menu a {
     text-decoration: none;
     color: black;
@@ -158,6 +154,7 @@ main {
     border-radius: 5px;
     margin: 1.5vw;
     display: block;
+
 
 }
 
