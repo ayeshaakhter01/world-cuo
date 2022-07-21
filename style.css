@@ -1,24 +1,17 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0 auto;
-
-    display: flex;
-    flex-direction: column;
     box-sizing: border-box;
 }
 
 main {
     width: 90%;
-    display: flex;
-    flex-direction: column;
-    display: flex;
     justify-content: center;
     padding-left: 4.5vw;
 
 }
 
 #container {
-    display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 2rem;
@@ -30,6 +23,7 @@ main {
     background-color: black;
     display: flex;
     border-radius: 2rem;
+
 }
 
 .half-width>img {
@@ -59,24 +53,36 @@ main {
 
 .button {
     padding-bottom: 1rem;
+    position: relative;
 }
 
 .link-button {
+    width: 10vw;
     text-decoration: none;
     background-color: red;
     color: white;
     padding: 1vw 1.5vw;
     border-radius: 0.5rem;
-    font-weight: 750;
 
+    position: relative;
+    animation: sliding 2s ease-in-out 0.5s infinite alternate;
 }
 
-.center {
+@keyframes sliding {
+    0% {
+        width: 15vw;
+        padding: 1.5vw 2vw;
+    }
+}
+
+
+.top {
     padding-top: 8vw;
 
 }
 
 /* for desktop: */
+
 .col-1 {
     width: 8.33%;
 }
@@ -125,6 +131,9 @@ main {
     width: 100%;
 }
 
+
+
+
 [class*="col-"] {
     float: left;
     margin: 1vw;
@@ -138,8 +147,6 @@ main {
 
 .nav-menu {
     background-color: black;
-    width: 22%;
-    height: 30%;
     padding: 1%;
     border-radius: 0.5rem;
 
@@ -246,26 +253,14 @@ footer hr {
     font-size: 2.5vw;
 }
 
+/*mobile*/
 @media screen and(max-width:600px) {
-    .main {
+    [class*="col-"] {
         width: 100%;
     }
+}
 
-    .container {
-        flex-direction: column-reverse;
-
-    }
-
-    .half-width {
-        width: 100%;
-    }
-
-    .nav-menu {
-        width: 100%;
-        height: 100%;
-
-    }
-
-
-
+/*laptop*/
+@media screen and(min-width:700px) {
+    grid-template-columns: repeat(3, 1);
 }
